@@ -1,3 +1,7 @@
+# web-aquamarine
+Repository for a 2024 AstroJS-based vspace.one page. The version name is based on HTML color codes.
+
+
 # Astro Starter Kit: Basics
 
 ```sh
