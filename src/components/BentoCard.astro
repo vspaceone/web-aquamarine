@@ -10,23 +10,9 @@ interface Props {
 const { title, description, imageSrc } = Astro.props;
 ---
 
-<div class="flex max-md:flex-col border-2 h-96 p-2 rounded-xl gap-4 bg-white">
-	<div class="md:w-1/2">
+<div class="border-2 h-96 p-2 rounded-xl bg-cover group" style=`background-image: url(${imageSrc});`>
+	<div class="flex flex-col gap-2 md:w-1/2 backdrop-blur bg-slate-600/50 group-hover:opacity-0 transition-opacity rounded-xl p-4 text-white border border-slate-600">
 		<h3 class="text-2xl font-bold">{title}</h3>
-		{description && <p class="text-gray-500">{description}</p>}
+		{description && <p>{description}</p>}
 	</div>
-	{
-		imageSrc && (
-			<div class="rounded-xl overflow-hidden h-fit md:w-1/2">
-				<Image
-					itemprop="image"
-					width={3448}
-					height={4592}
-					src={imageSrc}
-					alt={title}
-					class="overflow-hidden object-contain"
-				/>
-			</div>
-		)
-	}
 </div>
