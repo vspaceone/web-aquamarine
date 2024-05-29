@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BentoCard from "../components/BentoCard.astro";
+import BentoCardSmall from "../components/BentoCardSmall.astro";
+
 ---
 
 <Layout
@@ -7,60 +10,65 @@ import Layout from "../layouts/Layout.astro";
 >
 	<main>
 		<div>
-			<h2 class="text-2xl font-bold">Makerspace und Hackerspace</h1>
-		<p>
-			Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
-			in den Bereichen neuartiger computergestützter Technologien (wie zum
-			Beispiel aber nicht ausschließlich 3D-­Druck, CNC, Internet der Dinge und
-			Robotik), der Elektrotechnik und Elektronik sowie auch auf Gebieten der
-			Reparatur und Wartung.
-		</p>
-		<p>
-			Natürlich aber auch ganz im Sinne aller anderen
-			Hacker- und Makerspaces das bieten einer Plattform, um seinen Interessen
-			in diesen Gebieten nachzugehen von Programmieren bis Holz- und
-			Metallwerken ist fast alles dabei.
-		</p>
-		<p>
-			Dazu haben wir eine immer größer
-			werdende offene Werkstatt, die für jeden zugänglich sein soll!
-		</p>
+			<h2 class="text-2xl font-bold">Makerspace und Hackerspace</h2>
+			<p>
+				Unser Ziel ist der Wissensaustausch sowie die Bildung aller
+				interessierten in den Bereichen neuartiger computergestützter
+				Technologien (wie zum Beispiel aber nicht ausschließlich 3D-­Druck, CNC,
+				Internet der Dinge und Robotik), der Elektrotechnik und Elektronik sowie
+				auch auf Gebieten der Reparatur und Wartung.
+			</p>
+			<p>
+				Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces
+				das bieten einer Plattform, um seinen Interessen in diesen Gebieten
+				nachzugehen von Programmieren bis Holz- und Metallwerken ist fast alles
+				dabei.
+			</p>
+			<p>
+				Dazu haben wir eine immer größer werdende offene Werkstatt, die für
+				jeden zugänglich sein soll!
+			</p>
 		</div>
 		<div>
 			<h2 class="text-2xl font-bold">Unsere Räumlichkeiten</h2>
-			<div class="grid grid-cols-4">
-				<div>
-					<h3>Gemeinsam zum Ziel</h3>
-					<p>Sich gegenseitig motivieren, inspirieren, helfen und voneinander lernen. Manches macht gemeinsam einfach mehr Spaß!</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
+			<div class="md:grid md:grid-cols-3 flex flex-col gap-2">
+				<div class="col-span-2">
+					<BentoCard
+						title="Ausstattung"
+						description="Wir haben drei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an dank unserer vieler Maschinen an größeren Projekten gearbeitet werden. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet."
+						imageSrc="/pic/vspaceone_maschinenraum.jpg"
+					/>
 				</div>
-				<div>
-					<h3>3D Druck</h3>
-					<p>Unser Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
+				<BentoCardSmall
+					title="Gemeinsam zum Ziel"
+					description="Sich gegenseitig motivieren, inpirieren, helfen und voneinander lernen. Manches macht gemeinsam einfach mehr Spaß!"
+					imageSrc="/pic/vspaceone_gemeinschaft.jpg"
+				/>
+				<BentoCardSmall
+					title="3D Druck"
+					description="Unser Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können."
+					imageSrc="/pic/vspaceone_prusa_mk3s.jpg"
+				/>
+				<div class="col-span-2">
+					<BentoCard
+						title="Holz und Metall"
+						description="Unsere noch nicht allzu große, aber ständig wachsende, Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine Projekte in unseren Räumen bereit."
+						imageSrc="/pic/vspaceone_holzundmetall.jpg"
+					/>
 				</div>
-				<div>
-					<h3>Elektronik</h3>
-					<p>Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
-				</div>
-				<div>
-					<h3>Reparatur</h3>
-					<p>Eine Wand voll mit sortierten Elektronikkomponenten bietet die Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
-				</div>
-				<div>
-					<h3>Holz und Metall</h3>
-					<p>Unsere noch nicht allzu große, aber ständig wachsende, Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine Projekte in unseren Räumen bereit.</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
-				</div>
-				<div>
-					<h3>Ausstattung</h3>
-					<p>Wir haben drei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an dank unserer vieler Maschinen an größeren Projekten gearbeitet werden. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet.</p>
-					<img class="h-28 w-28" src="https://vspace.one/pic/logo_vspaceone.svg" />
+				<div class="col-span-3 flex max-md:flex-col gap-2">
+					<BentoCardSmall
+						title="Reparatur"
+						description="Eine Wand voll mit sortierten Elektronikkomponenten bietet die Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren."
+						imageSrc="/pic/vspaceone_cap_drawers.jpg"
+					/>
+					<BentoCardSmall
+						title="Elektronik"
+						description="Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel."
+						imageSrc="/pic/vspaceone_big_psu.jpg"
+					/>
 				</div>
 			</div>
 		</div>
-		
 	</main>
 </Layout>
